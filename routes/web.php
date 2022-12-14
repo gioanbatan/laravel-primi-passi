@@ -15,7 +15,33 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $data = [
-        "test" => "Hello Word"
+        "title" => "Laravel primi passi",
+        "pages" => [
+            [
+                "name" => "Descrizione",
+                "route" => "about"
+            ],
+            [
+                "name" => "Contenuti",
+                "route" => "contents"
+            ],
+            [
+                "name" => "Fonti",
+                "route" => "sources"
+            ]
+        ]
     ];
     return view('home', $data);
 })->name('home');
+
+Route::get('/descrizione', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/contenuti', function () {
+    return view('contents');
+})->name('contents');
+
+Route::get('/fonti', function () {
+    return view('sources');
+})->name('sources');
