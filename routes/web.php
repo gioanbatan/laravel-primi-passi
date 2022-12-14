@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     $data = [
-        "title" => "Laravel primi passi",
+        "pageTitle" => "Laravel primi passi",
         "pages" => [
             [
                 "name" => "Descrizione",
@@ -35,11 +36,16 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/descrizione', function () {
-    return view('about');
+    $pageTitle = "Laravel primi passi";
+    return view('about', compact("pageTitle"));
 })->name('about');
 
 Route::get('/contenuti', function () {
-    return view('contents');
+    $data = [
+        "pageTitle" => "Contenuti del sito",
+        "numbers" => [14,64,76,64,2,1,656,2,234],
+    ]
+    return view('contents', $data);
 })->name('contents');
 
 Route::get('/fonti', function () {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <style>
-        /* RESET */
         * {
             padding: 0;
             margin: 0;
@@ -33,6 +32,10 @@
             padding: 1rem 6rem;
         }
 
+        li {
+            list-style: none;
+        }
+
         h1,
         h2,
         p {
@@ -46,7 +49,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>{{ $title }}</h1>
+            <h1>{{ $pageTitle }}</h1>
             <h2>Framework</h2>
 
             <p>Da qui potrai accedere alle pagine disponibili:</p>
