@@ -50,7 +50,7 @@
     <header>
         <div class="container">
             <h1>{{ $pageTitle }}</h1>
-            <h2>Framework</h2>
+            <h2>Framework Laravel</h2>
         </div>
     </header>
 

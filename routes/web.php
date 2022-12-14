@@ -43,8 +43,8 @@ Route::get('/descrizione', function () {
 Route::get('/contenuti', function () {
     $data = [
         "pageTitle" => "Contenuti del sito",
-        "numbers" => [14,64,76,64,2,1,656,2,234],
-    ]
+        "numbers" => [14, 64, 76, 64, 2, 1, 656, 2, 234],
+    ];
     return view('contents', $data);
 })->name('contents');
 
