@@ -49,5 +49,6 @@ Route::get('/contenuti', function () {
 })->name('contents');
 
 Route::get('/fonti', function () {
-    return view('sources');
+    $pageTitle = "Fonti";
+    return view('sources', compact("pageTitle"));
 })->name('sources');
